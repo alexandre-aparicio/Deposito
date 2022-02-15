@@ -8,6 +8,7 @@ public class Main {
 
         operativa_cuenta(1.5f);
     }
+
     private static void operativa_cuenta(float cantidad) {
         CCuenta cuenta1;
         double saldoActual;
@@ -16,7 +17,8 @@ public class Main {
         System.out.println("El saldo actual es "+ saldoActual );
         try {
             cuenta1.retirar(2300);
-            
+            System.out.println("Procedemos a hacer una retirada");
+            System.out.println("El saldo actual es: "+ cuenta1.getSaldo() );
         } catch (Exception e) {
             System.out.print("Fallo al retirar");
         }
