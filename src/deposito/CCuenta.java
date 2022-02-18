@@ -1,5 +1,8 @@
 package deposito;
-// Autor Alejandro Aparicio
+/**
+ * 
+ * @author Admin
+ */
 public class CCuenta {
 
     /**
@@ -82,11 +85,21 @@ public class CCuenta {
 
     public void ingresar(double cantidad) throws Exception
     {
+        /**
+         * Si la cantidad a ingresar es negativa mostrará una exepción
+         * 
+         */
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
+        /**
+         *  Suma la cantidad al saldo que dispone el cliente
+         */
         setSaldo(getSaldo() + cantidad);
     }
-
+/**
+ * 
+ * 
+ */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
